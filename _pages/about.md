@@ -35,3 +35,28 @@ Very high-level overview of what grinds my gears. For more detailed research int
   * Microfluidics for Biology
   * Cell and Tissue Engineering
   * Low-Cost and Accessible Devices
+
+## Technical Background
+Current expertise, both practical and theoretical. See some applications of these skills in my engineering [portfolio](/portfolio/)!
+
+### Hardware
+  * **_Fabrication:_** PDMS-Based Microfluidics, 3D Printing (FDM & SLA), Metal Machining, Laser Cutting
+  * **_Imaging:_** Quantitative Phase Imaging, Phase Contrast Microscopy, Fluorescence Microscopy
+  * **_Electromechanical:_** UR5 Robots, Pneumatic Bellow Soft Robotics, Arduino, Soldering & Circuitry
+  * **_Biology:_** Mammalian Cell Culture, Nanoparticle-Mediated Gene Delivery, Small Molecule Delivery, Vasculature Modeling in Hydrogels, Gel Electrophoresis
+
+### Software
+  * **_Programming Languages:_** MATLAB, Python, Arduino, C#, C++, Java, HTML/JS/CSS
+  * **_Libraries/Frameworks:_** LaTeX, ROS, OpenCV, Reflexxes, Selenium, MCmatlab (Monte Carlo)
+  * **_Tools:_** Fusion 360, ImageJ, Solidworks, Adobe CC
+
+### Selected Coursework
+  * _**EN.530.721: Medical Robotics System Design** - Prof. Axel Krieger_
+    * _Level: graduate | Project-Based: yes_
+    * Robot-camera hand-eye registration, intraoperative image analysis (contour detection, fiducial localization), image-guided trajectory tracking, soft robotic actuators modeling and control, clinical regulations, mock surgery experimental design
+  * _**EN.530.441: Introduction to Biophotonics** - Prof. Ishan Barman_
+    * _Level: undergraduate | Project-Based: proposal only_
+    * Basic quantum mechanics and optics, absorption spectroscopy, fluorescence lifetime imaging microscopy, fluorescence recovery after photobleaching, fluorescence resonance energy transfer, Raman spectroscopy, quantitative phase imaging
+  * _**EN.530.647: Adaptive Systems and Controls** - Prof. Louis Whitcomb_
+    * _Level: graduate | Project-Based: no_
+    * Basic concepts in real analysis and Lyapunov stability theory, adaptive system identification, model-reference adaptive control (direct and indirect), adaptive observers, adaptive trajectory-tracking of rigid robots (computed torque/exactly linearizing, sliding mode, inverse dynamics)

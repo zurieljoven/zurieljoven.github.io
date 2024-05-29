@@ -21,7 +21,7 @@ repository               : "zurieljoven/zurieljoven.github.io"
 #               Additional customization can be done by editing /_includes/author-profile.html
 author:
   # Biographic information
-  avatar           : "profile.png"
+  avatar           : "pfp.png"
   name             : "Zuriel Joven"
   pronouns         : #
   bio              : "BS/MSE Mechanical Engineering '25\nJohns Hopkins Universty"

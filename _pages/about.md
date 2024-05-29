@@ -86,6 +86,6 @@ A digital trophy shelf of sorts from my time at Hopkins. Putting those bragging 
   * _**Dean's List:** Fall 2022 Semester_
   * _**Dean's List:** Spring 2022 Semester_
   * _**Dean's List:** Fall 2021 Semester_
-  * _**JHU MechE Freshman Design Competition Winner:** December 1, 2021
+  * _**JHU MechE Freshman Design Competition Winner:** December 1, 2021_
     * [Head-to-head tournament of design teams](https://hub.jhu.edu/gallery/2021/12/07/design-challenge/) using gravitational potential energy to accurately launch flying discs towards a target
 

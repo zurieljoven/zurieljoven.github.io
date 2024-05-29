@@ -62,7 +62,7 @@ Current expertise, both practical and theoretical. See some applications of thes
     * Basic concepts in real analysis and Lyapunov stability theory, adaptive system identification, model-reference adaptive control (direct and indirect), adaptive observers, adaptive trajectory-tracking of rigid robots (computed torque/exactly linearizing, sliding mode, inverse dynamics)
 
 ## University Honors and Awards
-A digital trophy shelf of sorts from my time at JHU. Putting those bragging rights to use!
+A digital trophy shelf of sorts from my time at Hopkins. Putting those bragging rights to use!
 
 ### Honor Societies
   * _**Pi Tau Sigma, Tau Alpha Chapter:** Inducted November 11, 2023_

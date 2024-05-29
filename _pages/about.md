@@ -52,11 +52,14 @@ Current expertise, both practical and theoretical. See some applications of thes
 
 ### Selected Coursework
   * _**EN.530.721: Medical Robotics System Design** - Prof. Axel Krieger_
-    * _Level: graduate | Project-Based: yes_
+    * _Level: graduate \| Project-Based: yes_
     * Robot-camera hand-eye registration, intraoperative image analysis (contour detection, fiducial localization), image-guided trajectory tracking, soft robotic actuators modeling and control, clinical regulations, mock surgery experimental design
   * _**EN.530.441: Introduction to Biophotonics** - Prof. Ishan Barman_
-    * _Level: undergraduate | Project-Based: proposal only_
+    * _Level: undergraduate \| Project-Based: proposal only_
     * Basic quantum mechanics and optics, absorption spectroscopy, fluorescence lifetime imaging microscopy, fluorescence recovery after photobleaching, fluorescence resonance energy transfer, Raman spectroscopy, quantitative phase imaging
   * _**EN.530.647: Adaptive Systems and Controls** - Prof. Louis Whitcomb_
-    * _Level: graduate | Project-Based: no_
+    * _Level: graduate \| Project-Based: no_
     * Basic concepts in real analysis and Lyapunov stability theory, adaptive system identification, model-reference adaptive control (direct and indirect), adaptive observers, adaptive trajectory-tracking of rigid robots (computed torque/exactly linearizing, sliding mode, inverse dynamics)
+
+## Honors and Awards
+A digital

@@ -47,7 +47,7 @@ Current expertise, both practical and theoretical. See some applications of thes
 
 ### Software
   * **_Programming Languages:_** MATLAB, Python, Arduino, C#, C++, Java, HTML/JS/CSS
-  * **_Libraries/Frameworks:_** \\(\latex\\), ROS, OpenCV, Reflexxes, Selenium, MCmatlab (Monte Carlo)
+  * **_Libraries/Frameworks:_** \\(\LaTeX\\), ROS, OpenCV, Reflexxes, Selenium, MCmatlab (Monte Carlo)
   * **_Tools:_** Fusion 360, ImageJ, Solidworks, Adobe CC
 
 ### Selected Coursework

@@ -30,8 +30,8 @@
       {% if author.email %}
         <li><a href="mailto:{{ author.email }}"><i class="fa fa-solid fa-envelope icon-pad-right" aria-hidden="true"></i>{{ author.email }}</a></li>
       {% endif %}
-      {% if author.employer and author.url %}
-        <li><a href="{{ author.url }}"><i class="fa fa-solid fa-building-columns icon-pad-right" aria-hidden="true"></i>{{ author.employer }}</li>
+      {% if author.employer and author.uri %}
+        <li><a href="{{ author.uri }}"><i class="fa fa-solid fa-building-columns icon-pad-right" aria-hidden="true"></i>{{ author.employer }}</li>
       {% endif %}
       
 

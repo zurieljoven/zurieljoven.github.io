@@ -61,5 +61,31 @@ Current expertise, both practical and theoretical. See some applications of thes
     * _Level: graduate \| Project-Based: no_
     * Basic concepts in real analysis and Lyapunov stability theory, adaptive system identification, model-reference adaptive control (direct and indirect), adaptive observers, adaptive trajectory-tracking of rigid robots (computed torque/exactly linearizing, sliding mode, inverse dynamics)
 
-## Honors and Awards
-A digital
+## University Honors and Awards
+A digital trophy shelf of sorts from my time at JHU. Putting those bragging rights to use!
+
+### Honor Societies
+  * _**Pi Tau Sigma, Tau Alpha Chapter:** Inducted November 11, 2023_
+    * Vice President, 2024-2025
+  * _**Tau Beta Pi, Maryland Alpha Chapter:** Inducted November 10, 2023_
+    * Treasurer, 2024-2025
+  * **A. James Clark Scholars Program, Johns Hopkins University:** Admitted March 19, 2021
+
+### Recent Awards
+  * _**Robert George Gerstmyer Award:** May 23, 2024_
+    * [JHU MechE faculty-chosen award](https://www.instagram.com/p/C7hF3sPMWnI/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==) for "outstanding undergraduate achievement in mechanical engineering"
+  * _**Dean's List:** Spring 2024 Semester_
+  * _**JHU Multicultural Leadership Council's Student Organization of the Year Award:** April 23, 2024_
+    * Awarded to the Filipino Students Association 2023-2024 Executive Board
+  * _**Dean's List:** Fall 2023 Semester_
+  * _**Johns Hopkins Medicine [Radiology Research Day](https://www.hopkinsmedicine.org/radiology/research/research-day) Pre-Clinical Poster Award:** November 14, 2023_
+    * [Statistical Heterospectroscopy of MALDI Imaging and NMR Spectroscopy Data for Evaluation of Breast Tumor Models](/research/)
+  * _**Dean's List:** Spring 2023 Semester_
+  * _**Omicron Delta Kappa, Beta Circle Membership Invitation:** April 5, 2023_
+    * (Decided not to accept the invitation for financial reaasons)
+  * _**Dean's List:** Fall 2022 Semester_
+  * _**Dean's List:** Spring 2022 Semester_
+  * _**Dean's List:** Fall 2021 Semester_
+  * _**JHU MechE Freshman Design Competition Winner:** December 1, 2021
+    * [Head-to-head tournament of design teams](https://hub.jhu.edu/gallery/2021/12/07/design-challenge/) using gravitational potential energy to accurately launch flying discs towards a target
+

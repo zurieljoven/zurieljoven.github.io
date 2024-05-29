@@ -73,7 +73,7 @@ A digital trophy shelf of sorts from my time at Hopkins. Putting those bragging 
 
 ### Recent Awards
   * _**Robert George Gerstmyer Award:** May 23, 2024_
-    * [JHU MechE faculty-chosen award](https://www.instagram.com/p/C7hF3sPMWnI/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==) for "outstanding undergraduate achievement in mechanical engineering"
+    * [JHU MechE faculty-chosen award](https://me.jhu.edu/news/award-winners-for-class-of-2024-announced/) for "outstanding undergraduate achievement in mechanical engineering"
   * _**Dean's List:** Spring 2024 Semester_
   * _**JHU Multicultural Leadership Council's Student Organization of the Year Award:** April 23, 2024_
     * Awarded to the Filipino Students Association 2023-2024 Executive Board

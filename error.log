@@ -101,3 +101,54 @@ To https://github.com/zurieljoven/zurieljoven.github.io.git
    3c9b385..77bc520  main -> main
 
 
+----------
+
+Sun Nov 10 2024 14:34:27 GMT-0500 (Eastern Standard Time)
+
+! was unexpected at this time.
+
+
+----------
+
+Sun Nov 10 2024 14:37:12 GMT-0500 (Eastern Standard Time)
+
+warning: CRLF will be replaced by LF in error.log.
+The file will have its original line endings in your working directory
+
+
+----------
+
+Sun Nov 10 2024 14:37:12 GMT-0500 (Eastern Standard Time)
+
+error: pathspec 'update.ΓÇ¥' did not match any file(s) known to git
+
+
+----------
+
+Sun Nov 10 2024 14:37:14 GMT-0500 (Eastern Standard Time)
+
+Everything up-to-date
+
+
+----------
+
+Sun Nov 10 2024 14:37:31 GMT-0500 (Eastern Standard Time)
+
+warning: CRLF will be replaced by LF in error.log.
+The file will have its original line endings in your working directory
+
+
+----------
+
+Sun Nov 10 2024 14:37:32 GMT-0500 (Eastern Standard Time)
+
+error: pathspec 'update.ΓÇ¥' did not match any file(s) known to git
+
+
+----------
+
+Sun Nov 10 2024 14:37:33 GMT-0500 (Eastern Standard Time)
+
+Everything up-to-date
+
+

@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // Update the text content
     textElement.textContent = `${getText(currentNumbers[0], '+ students served')}, `
-                             + `${getText(currentNumbers[1], currentNumbers[1] === 1 ? ' TA managed as Head TA' : ' TAs managed as Head TA')}`;
+                             + `${getText(currentNumbers[1], currentNumbers[1] === 1 ? ' TA mentored as Head TA' : ' TAs mentored as Head TA')}`;
 
     if (allCompleted) clearInterval(timer);
   }, interval);

@@ -9,3 +9,7 @@ offset-05 {
   margin-left: 3.33333333%;
 }
 
+.text-shadow {
+  text-shadow: 2px 2px 3px var(--bs-dark);
+}
+

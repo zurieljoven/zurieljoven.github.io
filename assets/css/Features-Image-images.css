@@ -10,7 +10,7 @@ offset-05 {
 }
 
 .text-shadow {
-  text-shadow: 2px 2px 3px var(--bs-dark);
+  text-shadow: 5px 5px 5px var(--bs-dark);
 }
 
 .overlay {
@@ -73,5 +73,12 @@ offset-05 {
 
 body.popup-active {
   /*overflow: hidden;*/
+}
+
+.container {
+}
+
+.index-parallax {
+  display: none;
 }
 

@@ -285,30 +285,9 @@ footer.sheet {
 .frame-tick.bl { bottom: 10px; left: 10px; border-left: 1px solid var(--rule-2); border-bottom: 1px solid var(--rule-2); }
 .frame-tick.br { bottom: 10px; right: 10px; border-right: 1px solid var(--rule-2); border-bottom: 1px solid var(--rule-2); }
 
-/* leader-line draw-on animation */
-.ld {
-  stroke: var(--ink);
-  stroke-width: 1;
-  stroke-dasharray: 200;
-  stroke-dashoffset: 200;
-  will-change: stroke-dashoffset;
-  -webkit-animation: zjDraw 1s ease forwards;
-  animation: zjDraw 1s ease forwards;
-}
-.dot {
-  opacity: 0;
-  will-change: opacity;
-  -webkit-animation: zjDot 1.3s ease forwards;
-  animation: zjDot 1.3s ease forwards;
-}
-@-webkit-keyframes zjDraw { to { stroke-dashoffset: 0; } }
-@keyframes zjDraw { to { stroke-dashoffset: 0; } }
-@-webkit-keyframes zjDot { 0%,55% { opacity: 0; } 100% { opacity: 1; } }
-@keyframes zjDot { 0%,55% { opacity: 0; } 100% { opacity: 1; } }
-@media (prefers-reduced-motion: reduce) {
-  .ld { -webkit-animation: none; animation: none; stroke-dashoffset: 0; }
-  .dot { -webkit-animation: none; animation: none; opacity: 1; }
-}
+/* leader-line draw-on — initial state only; JS drives the animation */
+.ld  { stroke: var(--ink); stroke-width: 1; stroke-dasharray: 200; stroke-dashoffset: 0; }
+.dot { opacity: 1; }
 
 /* =========================================================
    SELECTED WORK  (Variation B figure grid)
@@ -621,31 +600,14 @@ a.phighlight-label:hover { text-decoration: underline; }
   overflow: hidden;
   border-bottom: 1px solid var(--rule);
   padding: 20px 0;
-  /* new stacking context so iOS Safari composites the child correctly */
-  -webkit-transform: translateZ(0);
-  transform: translateZ(0);
-}
-
-@-webkit-keyframes affil-scroll {
-  from { -webkit-transform: translateX(0); transform: translateX(0); }
-  to   { -webkit-transform: translateX(-50%); transform: translateX(-50%); }
-}
-@keyframes affil-scroll {
-  from { transform: translateX(0); }
-  to   { transform: translateX(-50%); }
 }
 
 .affil-track {
   display: flex;
   align-items: center;
   gap: 72px;
-  /* explicit min-width forces correct layout before animation starts */
   width: -webkit-max-content;
   width: max-content;
-  min-width: 200vw;
-  will-change: transform;
-  -webkit-animation: affil-scroll 28s linear infinite;
-  animation: affil-scroll 28s linear infinite;
 }
 
 .affil-item {
@@ -679,9 +641,6 @@ a.phighlight-label:hover { text-decoration: underline; }
   opacity: 1;
 }
 
-@media (prefers-reduced-motion: reduce) {
-  .affil-track { -webkit-animation: none; animation: none; }
-}
 
 .rg-grid { display: contents; } /* cards stack vertically, each full width */
 

@@ -56,14 +56,14 @@
       document.querySelectorAll('.ld').forEach(function (el) {
         var delay    = (parseFloat(el.style.animationDelay) || 0.4) * 1000;
         var duration = 1000;
-        el.setAttribute('stroke-dashoffset', '200');
+        el.style.strokeDashoffset = '200';
         setTimeout(function () {
           var start = null;
           (function frame(ts) {
             if (!start) start = ts;
             var p = Math.min((ts - start) / duration, 1);
             var eased = 1 - Math.pow(1 - p, 3); /* ease-out cubic */
-            el.setAttribute('stroke-dashoffset', (200 * (1 - eased)).toFixed(2));
+            el.style.strokeDashoffset = (200 * (1 - eased)).toFixed(2);
             if (p < 1) requestAnimationFrame(frame);
           })(performance.now());
         }, delay);

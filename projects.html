@@ -47,8 +47,18 @@ permalink: /projects/
       </div>
     </div>
     <div class="filter-meta">
-      <span class="filter-count"></span>
-      <button class="filter-clear" id="filterClear" style="display:none">clear filters</button>
+      <div class="sort-group">
+        <span class="filter-group-label">sort</span>
+        <div class="sort-chips">
+          <button class="chip sort-chip active" data-sort="alpha">a → z</button>
+          <button class="chip sort-chip" data-sort="recent">newest</button>
+          <button class="chip sort-chip" data-sort="oldest">oldest</button>
+        </div>
+      </div>
+      <div class="filter-meta-right">
+        <span class="filter-count"></span>
+        <button class="filter-clear" id="filterClear" style="display:none">clear filters</button>
+      </div>
     </div>
   </div>
 </section>
@@ -59,6 +69,7 @@ permalink: /projects/
      href="{{ p.url | relative_url }}"
      data-category="{{ p.category }}"
      data-year="{{ p.year }}"
+     data-title="{{ p.title | downcase }}"
      data-keywords="{{ p.keywords | join: ',' }}">
     <div class="thumb">{% if p.thumb and p.thumb != "" %}<img src="{{ p.thumb | relative_url }}" alt="{{ p.title }}">{% endif %}</div>
     <div class="rf">{% if p.status == 'active' %}{{ p.year }}–active{% else %}{{ p.period | default: p.year }}{% endif %}</div>
@@ -77,28 +88,52 @@ permalink: /projects/
 
 <script>
 (function () {
-  const LOGIC = "{{ filter_logic }}"; // "union" or "intersection" — set in _data/site.yml
+  const LOGIC = "{{ filter_logic }}";
   const active = { category: new Set(), year: new Set(), keywords: new Set() };
+  let currentSort = 'alpha';
 
-  const rows = document.querySelectorAll('#projectsList .prow');
-  const countEl = document.querySelector('.filter-count');
+  const list  = document.getElementById('projectsList');
+  const rows  = Array.from(list.querySelectorAll('.prow'));
+  const countEl  = document.querySelector('.filter-count');
   const clearBtn = document.getElementById('filterClear');
 
+  // ── sorting ──────────────────────────────────────────────
+  function sortRows() {
+    const sorted = rows.slice().sort((a, b) => {
+      if (currentSort === 'alpha') {
+        return a.dataset.title.localeCompare(b.dataset.title);
+      }
+      const ya = parseInt(a.dataset.year, 10);
+      const yb = parseInt(b.dataset.year, 10);
+      return currentSort === 'recent' ? yb - ya : ya - yb;
+    });
+    sorted.forEach(r => list.appendChild(r));
+  }
+
+  document.querySelectorAll('.sort-chip').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.sort-chip').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      currentSort = btn.dataset.sort;
+      sortRows();
+    });
+  });
+
+  // ── filtering ─────────────────────────────────────────────
   function applyFilters() {
     const hasAny = Object.values(active).some(s => s.size > 0);
     clearBtn.style.display = hasAny ? '' : 'none';
 
     let shown = 0;
     rows.forEach(row => {
-      const rowCat = row.dataset.category;
+      const rowCat  = row.dataset.category;
       const rowYear = row.dataset.year;
-      const rowKw = row.dataset.keywords ? row.dataset.keywords.split(',').map(s => s.trim()) : [];
+      const rowKw   = row.dataset.keywords ? row.dataset.keywords.split(',').map(s => s.trim()) : [];
 
       const groupMatches = {
         category: active.category.size === 0 || active.category.has(rowCat),
         year:     active.year.size === 0     || active.year.has(rowYear),
-        // keywords: intersection = project must have ALL selected keywords; union = any match
-        keywords: active.keywords.size === 0  ||
+        keywords: active.keywords.size === 0 ||
           (LOGIC === 'intersection'
             ? [...active.keywords].every(k => rowKw.includes(k))
             : rowKw.some(k => active.keywords.has(k)))
@@ -108,11 +143,9 @@ permalink: /projects/
       if (!hasAny) {
         visible = true;
       } else if (LOGIC === 'union') {
-        // show if any active group matches
         const activeGroups = Object.keys(active).filter(g => active[g].size > 0);
         visible = activeGroups.some(g => groupMatches[g]);
       } else {
-        // intersection: must match every group that has active filters
         visible = Object.keys(active).every(g => groupMatches[g]);
       }
 
@@ -145,5 +178,8 @@ permalink: /projects/
     document.querySelectorAll('.filter-chips .chip').forEach(c => c.classList.remove('active'));
     applyFilters();
   });
+
+  // initial sort
+  sortRows();
 })();
 </script>

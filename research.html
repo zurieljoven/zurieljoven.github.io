@@ -1,0 +1,82 @@
+---
+layout: default
+title: Research
+active: research
+permalink: /research/
+---
+
+{% assign r = site.data.research %}
+
+<section class="sheet page-head">
+  <div class="eyebrow">§ 02 — research</div>
+  <h1>research</h1>
+  <p class="lede">{{ r.statement }}</p>
+  <div class="research-interests">{{ r.interests }}</div>
+  <div class="research-stats">
+    {% for s in r.stats %}
+    <div class="rstat">
+      <span class="rstat-k">{{ s.k }}</span>
+      <span class="rstat-v">{{ s.v }}</span>
+    </div>
+    {% endfor %}
+  </div>
+</section>
+
+{% for group in r.groups %}
+<section class="sheet research-group">
+  <div class="rg-head">
+    <span class="rg-label">
+      {{- group.label | split: "·" | first | strip -}} ·
+      <a class="rg-lab-link" href="{{ group.lab_url }}" target="_blank" rel="noopener">{{ group.lab_name }}</a>
+    </span>
+    <span class="rg-inst">{{ group.institution }}</span>
+  </div>
+
+  {% for p in group.projects %}
+  {% assign is_even = forloop.index | modulo: 2 %}
+  <div class="rcard {% if is_even == 0 %}rcard--flip{% endif %}">
+    <div class="rcard-fig">
+      <div class="fig">
+        <span class="tick tl"></span><span class="tick tr"></span>
+        <span class="tick bl"></span><span class="tick br"></span>
+        {% if p.image and p.image != "" %}
+          <img src="{{ p.image | relative_url }}" alt="{{ p.title }}">
+        {% else %}
+          <span class="ph">[ figure ]</span>
+        {% endif %}
+      </div>
+    </div>
+    <div class="rcard-content">
+      <div class="rcard-top">
+        <div class="rcard-title">{{ p.title }}</div>
+      </div>
+      <p class="rcard-desc">{{ p.description }}</p>
+      {% if p.highlights %}
+      <ul class="rcard-highlights">
+        {% for h in p.highlights %}<li>{{ h }}</li>{% endfor %}
+      </ul>
+      {% endif %}
+      <div class="rcard-tags">
+        {% for tag in p.tags %}<span class="rtag">{{ tag }}</span>{% endfor %}
+      </div>
+      {% if p.project_url %}
+      <a class="rcard-link" href="{{ p.project_url | relative_url }}">read more →</a>
+      {% endif %}
+    </div>
+  </div>
+  {% endfor %}
+
+  {% if group.sponsors and group.sponsors.size > 0 %}
+  <div class="rg-sponsors">
+    <span class="rg-sponsors-label">supported by</span>
+    {% for s in group.sponsors %}
+      {% if s.logo and s.logo != "" %}
+        <img class="sponsor-logo" src="{{ s.logo | relative_url }}" alt="{{ s.name }}" title="{{ s.name }}">
+      {% else %}
+        <span class="rg-sponsor">{{ s.name }}</span>
+      {% endif %}
+    {% endfor %}
+  </div>
+  {% endif %}
+</section>
+{% endfor %}

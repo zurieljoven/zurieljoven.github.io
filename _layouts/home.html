@@ -1,0 +1,82 @@
+---
+layout: default
+---
+
+{% assign h = site.data.site.hero %}
+{% assign projects = site.projects | where: "featured", true | sort: "title" %}
+
+<!-- affiliation logo carousel -->
+<div class="affil-strip">
+  <div class="affil-track">
+    {% comment %}4 sets so translateX(-25%) = exactly one set, always fills any viewport{% endcomment %}
+    {% for rep in (1..4) %}
+      {% for a in site.data.site.affiliations %}
+        <a href="{{ a.url }}" target="_blank" rel="noopener noreferrer"
+           class="affil-item"
+           {% if rep > 1 %}aria-hidden="true" tabindex="-1"{% endif %}>
+          <img src="/assets/img/sponsors/{{ a.logo }}"
+               alt="{% if rep == 1 %}{{ a.alt }}{% endif %}"
+               class="affil-logo{% if a.invert %} affil-logo--invert{% endif %}">
+        </a>
+      {% endfor %}
+    {% endfor %}
+  </div>
+</div>
+
+<!-- hero (Variation A) -->
+<section class="sheet hero">
+  <div>
+    <div class="eyebrow">{{ h.eyebrow }}</div>
+    <h1>{{ h.title_line_1 }}<br><span class="x">×</span> {{ h.title_line_2 }}</h1>
+    <p class="lede">{{ h.lede }}</p>
+    <div class="facts">
+      {% for f in h.facts %}<div><span class="k">{{ f.k }}</span> {{ f.v }}</div>{% endfor %}
+    </div>
+    <div class="btn-row">
+      <a class="btn" href="{{ '/research/' | relative_url }}">view research →</a>
+      <a class="btn secondary" href="{{ '/projects/' | relative_url }}">projects →</a>
+    </div>
+  </div>
+
+  <!-- hero figure with leader-line callouts -->
+  <div class="hero-fig">
+    <div class="fig">
+      <span class="tick tl"></span><span class="tick tr"></span>
+      <span class="tick bl"></span><span class="tick br"></span>
+      {% if h.figure.image and h.figure.image != "" %}
+        <img src="{{ h.figure.image | relative_url }}" alt="{{ h.figure.caption_left }}">
+      {% else %}
+        <span class="ph">{{ h.figure.placeholder }}</span>
+      {% endif %}
+      <svg class="callouts" viewBox="0 0 380 480" preserveAspectRatio="xMidYMid meet">
+        <line class="ld" x1="300" y1="120" x2="356" y2="78"  style="animation-delay:.4s"></line>
+        <line class="ld" x1="120" y1="330" x2="36"  y2="392" style="animation-delay:.6s"></line>
+        <g class="dot" style="animation-delay:.4s"><circle cx="356" cy="78" r="10" fill="#F3EFE6" stroke="#A6392B" stroke-width="1.2"></circle><text x="356" y="82" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="11" fill="#A6392B">1</text></g>
+        <g class="dot" style="animation-delay:.6s"><circle cx="36" cy="392" r="10" fill="#F3EFE6" stroke="#A6392B" stroke-width="1.2"></circle><text x="36" y="396" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="11" fill="#A6392B">2</text></g>
+      </svg>
+    </div>
+    <div class="fig-cap">
+      <span>{{ h.figure.caption_left }}</span>
+      <span>{{ h.figure.caption_right }}</span>
+    </div>
+  </div>
+</section>
+
+<!-- selected work (Variation B figure grid) -->
+<section class="sheet work">
+  <div class="work-head">
+    <span class="ttl">selected work</span>
+    <span class="idx">index of figures · {{ projects.size | prepend: "0" | slice: -2, 2 }}</span>
+  </div>
+  <div class="work-grid">
+    {% for p in projects %}
+      <a class="work-card" href="{{ p.url | relative_url }}">
+        <div class="thumb">
+          {% if p.thumb and p.thumb != "" %}<img src="{{ p.thumb | relative_url }}" alt="{{ p.title }}">{% else %}[ figure ]{% endif %}
+        </div>
+        <div class="fignum">{{ p.category }} · {% if p.status == 'active' %}{{ p.year }}–active{% else %}{{ p.period | default: p.year }}{% endif %}</div>
+        <div class="name">{{ p.title }}</div>
+      </a>
+    {% endfor %}
+  </div>
+</section>

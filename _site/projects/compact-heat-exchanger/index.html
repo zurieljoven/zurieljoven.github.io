@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Compact Heat Exchanger · Zuriel Joven</title>
+  <meta name="description" content="Biophotonics × medical robotics — light-based instruments and steerable tools for medicine.">
+  <!-- apply saved theme before paint to avoid flash -->
+  <script>if(localStorage.getItem('theme')==='dark')document.documentElement.setAttribute('data-theme','dark');</script>
+  <!-- favicon -->
+  <link rel="icon" type="image/png" href="/assets/img/favicon-light.png" id="favicon-el">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body>
+
+  <header class="sheet page-corners">
+    <span class="frame-tick tl" aria-hidden="true"></span>
+    <span class="frame-tick tr" aria-hidden="true"></span>
+    <nav class="nav">
+      <a class="brand" href="/">
+        <span class="brand-mark">
+          <img src="/assets/img/favicon-clear.png" alt="ZJ" width="22" height="22" id="brand-mark-img">
+        </span>
+        zurieljoven.com: phd student @ mit
+      </a>
+      <div class="nav-links">
+        
+          <a href="/">home</a>
+        
+          <a href="/research/">research</a>
+        
+          <a href="/publications/">publications</a>
+        
+          <a href="/projects/">projects</a>
+        
+          <a href="/honors/">honors</a>
+        
+          <a href="/cv.pdf">cv</a>
+        
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">◑</button>
+      </div>
+    </nav>
+  </header>
+
+  
+
+
+
+
+
+
+
+<!-- patent header grid -->
+<div class="sheet">
+  <div class="phead">
+    <div class="cell">
+      <div class="k">year</div>
+      <div class="v">2024</div>
+    </div>
+    <div class="cell">
+      <div class="k">keywords</div>
+      <div class="v">heat transfer · hardware · low-cost design · thermal</div>
+    </div>
+    <div class="cell">
+      <div class="k">course</div>
+      <div class="v">jhu course project</div>
+    </div>
+  </div>
+</div>
+
+<!-- title -->
+<section class="sheet detail-title">
+  <div class="crumb">projects / compact heat exchanger</div>
+  <h1>Compact Heat Exchanger</h1>
+  <p class="summary">design and fabrication of a compact cross-flow heat exchanger</p>
+</section>
+
+<!-- highlights strip (optional) -->
+
+
+<!-- body + figures -->
+<section class="sheet detail">
+  <div class="body">
+    <p>Designed, fabricated, and characterized a compact cross-flow heat exchanger optimized for maximum heat transfer per unit volume under a fixed pressure drop constraint. Validated performance against CFD predictions.</p>
+
+  </div>
+
+  <aside class="aside">
+    
+
+    <div class="specs">
+      <div><span class="k">role —</span> design & fabrication</div>
+      <div><span class="k">lab —</span> jhu course project</div>
+      <div><span class="k">tools —</span> solidworks, ansys, machining</div>
+      
+    </div>
+  </aside>
+</section>
+
+<!-- prev / next -->
+<div class="sheet">
+  <div class="pn">
+    <a class="prev" href="/projects/">
+      <div class="k">← index</div><div class="v">— all projects</div>
+    </a>
+    
+    <a class="next" href="/projects/crafting-the-curve/">
+      <div class="k">next →</div><div class="v">Crafting the Curve</div>
+    </a>
+    
+  </div>
+</div>
+
+
+  <footer class="sheet footer page-corners">
+    <span class="frame-tick bl" aria-hidden="true"></span>
+    <span class="frame-tick br" aria-hidden="true"></span>
+    <a href="mailto:zuriel@mit.edu">zuriel@mit.edu</a>
+    <div class="links">
+      <a href="https://www.linkedin.com/in/zurieljoven/">linkedin</a><a href="https://www.youtube.com/zurieljoven">youtube</a><a href="https://scholar.google.com/citations?user=SA8QhfkAAAAJ&hl=en">scholar</a>
+    </div>
+    <span class="sheet-no">zuriel erikson valencia joven</span>
+  </footer>
+
+  <script>
+  (function () {
+    var root    = document.documentElement;
+    var btn     = document.getElementById('themeToggle');
+    var favicon = document.getElementById('favicon-el');
+    var lightFav = '/assets/img/favicon-light.png';
+    var darkFav  = '/assets/img/favicon-dark.png';
+
+    function applyTheme(dark) {
+      if (dark) {
+        root.setAttribute('data-theme', 'dark');
+        localStorage.setItem('theme', 'dark');
+        favicon.href = darkFav;
+      } else {
+        root.removeAttribute('data-theme');
+        localStorage.setItem('theme', 'light');
+        favicon.href = lightFav;
+      }
+    }
+
+    // sync favicon on initial load
+    applyTheme(root.getAttribute('data-theme') === 'dark');
+
+    btn.addEventListener('click', function () {
+      applyTheme(root.getAttribute('data-theme') !== 'dark');
+    });
+  })();
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,78 @@
+---
+layout: default
+title: Publications
+active: publications
+permalink: /publications/
+---
+
+{% assign pub = site.data.publications %}
+
+<section class="sheet page-head">
+  <div class="eyebrow">§ 03 — publications</div>
+  <h1>publications</h1>
+  <p class="lede">peer-reviewed articles, manuscripts, theses, and conference posters.</p>
+  {% if site.data.site.scholar_url and site.data.site.scholar_url != "#" %}
+  <div class="pub-scholar-link">
+    <a href="{{ site.data.site.scholar_url }}" target="_blank" rel="noopener">→ google scholar profile</a>
+  </div>
+  {% endif %}
+</section>
+
+<section class="sheet pub-section">
+  <div class="pub-section-head">journal papers</div>
+  {% for p in pub.journal %}
+  <div class="pub-row">
+    <div class="pub-year">{{ p.year }}</div>
+    <div class="pub-body">
+      <div class="pub-title">{{ p.title }}</div>
+      <div class="pub-authors">{{ p.authors | replace: "ZE Joven", "<span class='pub-self'>ZE Joven</span>" }}</div>
+      <div class="pub-venue">{{ p.venue }}{% if p.volume_pages %}, {{ p.volume_pages }}{% endif %}</div>
+      {% if p.note %}<div class="pub-note">{{ p.note }}</div>{% endif %}
+      {% if p.url %}<a class="pub-link" href="{{ p.url }}" target="_blank" rel="noopener">view paper →</a>{% endif %}
+    </div>
+  </div>
+  {% endfor %}
+</section>
+
+<section class="sheet pub-section">
+  <div class="pub-section-head">manuscripts under preparation</div>
+  {% for p in pub.manuscripts %}
+  <div class="pub-row">
+    <div class="pub-year pub-year--status">{{ p.status }}</div>
+    <div class="pub-body">
+      <div class="pub-title">{{ p.title }}</div>
+      <div class="pub-authors">{{ p.authors | replace: "ZE Joven", "<span class='pub-self'>ZE Joven</span>" }}</div>
+      {% if p.note %}<div class="pub-note">{{ p.note }}</div>{% endif %}
+    </div>
+  </div>
+  {% endfor %}
+</section>
+
+<section class="sheet pub-section">
+  <div class="pub-section-head">theses</div>
+  {% for p in pub.theses %}
+  <div class="pub-row">
+    <div class="pub-year">{{ p.year }}</div>
+    <div class="pub-body">
+      <div class="pub-title">{{ p.title }}</div>
+      <div class="pub-authors">{{ p.authors | replace: "ZE Joven", "<span class='pub-self'>ZE Joven</span>" }}</div>
+      <div class="pub-venue">{{ p.venue }}</div>
+    </div>
+  </div>
+  {% endfor %}
+</section>
+
+<section class="sheet pub-section pub-section--last">
+  <div class="pub-section-head">conference posters</div>
+  {% for p in pub.posters %}
+  <div class="pub-row">
+    <div class="pub-year">{{ p.year }}</div>
+    <div class="pub-body">
+      <div class="pub-title">{{ p.title }}</div>
+      {% if p.authors %}<div class="pub-authors">{{ p.authors | replace: "ZE Joven", "<span class='pub-self'>ZE Joven</span>" }}</div>{% endif %}
+      <div class="pub-venue">{{ p.venue }}</div>
+      {% if p.recognition %}<div class="pub-rec">◆ {{ p.recognition }}</div>{% endif %}
+    </div>
+  </div>
+  {% endfor %}
+</section>

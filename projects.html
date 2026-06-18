@@ -1,0 +1,149 @@
+---
+layout: default
+title: Projects
+active: projects
+permalink: /projects/
+---
+
+{% assign projects = site.projects | sort: "title" %}
+
+{% comment %} Collect unique filter values {% endcomment %}
+{% assign all_categories = projects | map: "category" | uniq | sort %}
+{% assign all_years = projects | map: "year" | uniq | sort | reverse %}
+{% assign all_keywords_raw = "" %}
+{% for p in projects %}{% for kw in p.keywords %}{% unless all_keywords_raw contains kw %}{% assign all_keywords_raw = all_keywords_raw | append: kw | append: "|" %}{% endunless %}{% endfor %}{% endfor %}
+{% assign all_keywords = all_keywords_raw | split: "|" | sort | uniq %}
+
+{% assign filter_logic = site.data.site.projects_filter_logic | default: "intersection" %}
+
+<section class="sheet page-head">
+  <div class="eyebrow">§ 04 — projects</div>
+  <h1>projects</h1>
+  <p class="lede">selected engineering &amp; research work in biophotonics and medical robotics — instruments, control, and measurement.</p>
+
+  <div class="filter-panel">
+    <div class="filter-group">
+      <div class="filter-group-label">category</div>
+      <div class="filter-chips" data-group="category">
+        {% for cat in all_categories %}
+        <button class="chip" data-value="{{ cat }}">{{ cat }}</button>
+        {% endfor %}
+      </div>
+    </div>
+    <div class="filter-group">
+      <div class="filter-group-label">year</div>
+      <div class="filter-chips" data-group="year">
+        {% for yr in all_years %}
+        <button class="chip" data-value="{{ yr }}">{{ yr }}</button>
+        {% endfor %}
+      </div>
+    </div>
+    <div class="filter-group">
+      <div class="filter-group-label">keywords</div>
+      <div class="filter-chips" data-group="keywords">
+        {% for kw in all_keywords %}
+        <button class="chip" data-value="{{ kw }}">{{ kw }}</button>
+        {% endfor %}
+      </div>
+    </div>
+    <div class="filter-meta">
+      <span class="filter-count"></span>
+      <button class="filter-clear" id="filterClear" style="display:none">clear filters</button>
+    </div>
+  </div>
+</section>
+
+<section class="sheet projects-list" id="projectsList">
+  {% for p in projects %}
+  <a class="prow"
+     href="{{ p.url | relative_url }}"
+     data-category="{{ p.category }}"
+     data-year="{{ p.year }}"
+     data-keywords="{{ p.keywords | join: ',' }}">
+    <div class="thumb">{% if p.thumb and p.thumb != "" %}<img src="{{ p.thumb | relative_url }}" alt="{{ p.title }}">{% endif %}</div>
+    <div class="rf">{% if p.status == 'active' %}{{ p.year }}–active{% else %}{{ p.period | default: p.year }}{% endif %}</div>
+    <div>
+      <div class="name">{{ p.title }}</div>
+      <div class="sub">{{ p.summary }}</div>
+    </div>
+    <div class="cat">{{ p.category }}</div>
+    <div class="status {% if p.status == 'active' %}active{% else %}done{% endif %}">
+      <span class="d"></span>{% if p.status == 'active' %}active{% else %}done{% endif %}
+    </div>
+    <div class="arrow">→</div>
+  </a>
+  {% endfor %}
+</section>
+
+<script>
+(function () {
+  const LOGIC = "{{ filter_logic }}"; // "union" or "intersection" — set in _data/site.yml
+  const active = { category: new Set(), year: new Set(), keywords: new Set() };
+
+  const rows = document.querySelectorAll('#projectsList .prow');
+  const countEl = document.querySelector('.filter-count');
+  const clearBtn = document.getElementById('filterClear');
+
+  function applyFilters() {
+    const hasAny = Object.values(active).some(s => s.size > 0);
+    clearBtn.style.display = hasAny ? '' : 'none';
+
+    let shown = 0;
+    rows.forEach(row => {
+      const rowCat = row.dataset.category;
+      const rowYear = row.dataset.year;
+      const rowKw = row.dataset.keywords ? row.dataset.keywords.split(',').map(s => s.trim()) : [];
+
+      const groupMatches = {
+        category: active.category.size === 0 || active.category.has(rowCat),
+        year:     active.year.size === 0     || active.year.has(rowYear),
+        // keywords: intersection = project must have ALL selected keywords; union = any match
+        keywords: active.keywords.size === 0  ||
+          (LOGIC === 'intersection'
+            ? [...active.keywords].every(k => rowKw.includes(k))
+            : rowKw.some(k => active.keywords.has(k)))
+      };
+
+      let visible;
+      if (!hasAny) {
+        visible = true;
+      } else if (LOGIC === 'union') {
+        // show if any active group matches
+        const activeGroups = Object.keys(active).filter(g => active[g].size > 0);
+        visible = activeGroups.some(g => groupMatches[g]);
+      } else {
+        // intersection: must match every group that has active filters
+        visible = Object.keys(active).every(g => groupMatches[g]);
+      }
+
+      row.style.display = visible ? '' : 'none';
+      if (visible) shown++;
+    });
+
+    countEl.textContent = hasAny ? shown + ' / ' + rows.length + ' shown' : '';
+  }
+
+  document.querySelectorAll('.filter-chips').forEach(group => {
+    const groupName = group.dataset.group;
+    group.querySelectorAll('.chip').forEach(chip => {
+      chip.addEventListener('click', () => {
+        const val = chip.dataset.value;
+        if (active[groupName].has(val)) {
+          active[groupName].delete(val);
+          chip.classList.remove('active');
+        } else {
+          active[groupName].add(val);
+          chip.classList.add('active');
+        }
+        applyFilters();
+      });
+    });
+  });
+
+  clearBtn.addEventListener('click', () => {
+    Object.values(active).forEach(s => s.clear());
+    document.querySelectorAll('.filter-chips .chip').forEach(c => c.classList.remove('active'));
+    applyFilters();
+  });
+})();
+</script>

@@ -1,0 +1,52 @@
+# =========================================================
+#  SITE CONTENT — edit this file to change copy site-wide.
+#  (Project entries live as Markdown files in _projects/.)
+# =========================================================
+
+brand: "zurieljoven.com: phd student @ mit"
+email: "zuriel@mit.edu"
+
+# top navigation — order matters; `key` is matched against each page's `active:`
+nav:
+  - { key: home,         label: "home",         url: "/" }
+  - { key: research,     label: "research",     url: "/research/" }
+  - { key: publications, label: "publications", url: "/publications/" }
+  - { key: projects,     label: "projects",     url: "/projects/" }
+  - { key: honors,       label: "honors",       url: "/honors/" }
+  - { key: cv,           label: "cv",           url: "/cv.pdf" }
+
+# Projects filter logic: "intersection" (must match all active groups) or "union" (match any active filter)
+projects_filter_logic: "intersection"
+
+# hero (home page)
+hero:
+  eyebrow: "§ 01 — zuriel erikson valencia joven"
+  title_line_1: "biophotonics"
+  title_line_2: "robotics"          # rendered as  × robotics
+  lede: "mechanical engineer specializing in biophotonics & medical robotics — building light-based instruments and steerable tools for medicine."
+  facts:
+    - { k: "current —",  v: "phd student, harvard-mit hst · yun lab, wellman center for photomedicine @ mgh" }
+    - { k: "previous —", v: "bs/mse, johns hopkins mechanical engineering · barman lab" }
+  # hero figure: set `image` to a path under /img to replace the placeholder
+  figure:
+    image: ""                       # e.g. "/img/portrait.jpg"
+    placeholder: "[ hero portrait · 4:5 ]"
+    caption_left: "fig. 1 — z. joven"
+    caption_right: "1 photonics · 2 robotics"
+
+# affiliation logo carousel (homepage)
+affiliations:
+  - { logo: "hst.svg",      alt: "Harvard-MIT HST",                  url: "https://hst.mit.edu",                       invert: false }
+  - { logo: "mit.png",       alt: "MIT",                              url: "https://mit.edu",                           invert: false }
+  - { logo: "hms.png",       alt: "Harvard Medical School",           url: "https://hms.harvard.edu",                   invert: false }
+  - { logo: "mgh.png",       alt: "Mass General Hospital",            url: "https://www.massgeneral.org",               invert: false }
+  - { logo: "wellman.png",   alt: "Wellman Center for Photomedicine", url: "https://wellman.massgeneral.org",           invert: true  }
+  - { logo: "nsf-grfp.png",  alt: "NSF GRFP",                         url: "https://www.nsfgrfp.org",                   invert: false }
+
+# footer
+scholar_url: "https://scholar.google.com/citations?user=SA8QhfkAAAAJ&hl=en"   # replace # with your Google Scholar profile URL
+
+socials:
+  - { label: "linkedin", url: "https://www.linkedin.com/in/zurieljoven/" }
+  - { label: "youtube",  url: "https://www.youtube.com/zurieljoven" }
+  - { label: "scholar",  url: "https://scholar.google.com/citations?user=SA8QhfkAAAAJ&hl=en" }

@@ -1,0 +1,58 @@
+# =========================================================
+#  Publications — edit this file to update the publications page.
+#  Sections: journal, manuscripts, theses, posters
+# =========================================================
+
+journal:
+  - title: "Material-Agnostic Characterization of Spatially Offset Raman Spectroscopy in Turbid Media via Monte Carlo Simulations"
+    authors: "ZE Joven, P Raj, I Barman"
+    venue: "Analyst"
+    volume_pages: "Vol. 149, pp. 5463–5475"
+    year: 2024
+    note: "150th Anniversary Collection: Raman Spectroscopy and SERS"
+    url: "https://pubs.rsc.org/en/content/articlelanding/2024/an/d4an01044b"
+
+manuscripts:
+  - title: "Nondestructive Depth-Dependent Mapping of Mechanical Properties in Cartilage via Spatially Offset Raman Spectroscopy"
+    authors: "ZE Joven, L Wu*, A Gupta*, K Wang, C Almeida, B Yang, P Raj, JM Middendorf, I Barman"
+    note: "* equal contributors"
+    status: "under preparation"
+
+theses:
+  - title: "Label-Free Optical Biosensing for Malaria and Osteoarthritis"
+    authors: "ZE Joven"
+    venue: "Master's Thesis, Johns Hopkins University, Department of Mechanical Engineering"
+    year: 2025
+
+posters:
+  - title: "Towards Field-Deployable, Noninvasive Detection of Plasmodium-Infected Mosquitoes via Quantitative Phase Imaging"
+    authors: "ZE Joven, L Wu, T Thanakornsombut, A Tripathi, I Barman"
+    venue: "2025 World Malaria Day Symposium, Baltimore, MD, USA"
+    year: 2025
+
+  - title: "Material-Agnostic Characterization of Spatially Offset Raman Spectroscopy in Turbid Media via Monte Carlo Simulations"
+    authors: "ZE Joven, P Raj, I Barman"
+    venue: "SciX 2024, Raleigh, NC, USA"
+    year: 2024
+    recognition: "1st Place FACSS Student Poster Award"
+
+  - title: "MALDI-MRS-SHY: Statistical Heterospectroscopy of MALDI Imaging and Magnetic Resonance Spectroscopy"
+    authors: "D Brown, ZE Joven, N Dillman, E Yang, C Johnson, S Nakuchima, C Tressler, K Glunde"
+    venue: "ISMRM & ISMRT 2024 Annual Meeting & Exhibition, Singapore"
+    year: 2024
+
+  - title: "Statistical Heterospectroscopy of MALDI Imaging and NMR Spectroscopy Data for Evaluation of Breast Tumor Models"
+    authors: "D Brown, ZE Joven, N Dillman, E Yang, C Johnson, S Nakuchima, C Tressler, K Glunde"
+    venue: "Johns Hopkins Medicine: 2023 Radiology Research Day, Baltimore, MD, USA"
+    year: 2023
+    recognition: "Pre-Clinical Poster Award"
+
+  - title: "Statistical Heterospectroscopy of MALDI Imaging and NMR Spectroscopy Data for Evaluation of Breast Tumor Models"
+    authors: "D Brown, ZE Joven, N Dillman, E Yang, C Johnson, S Nakuchima, C Tressler, K Glunde"
+    venue: "1st International Mass Spectrometry Imaging Society Conference, Montreal, Quebec, Canada"
+    year: 2024
+
+  - title: "Statistical Heterospectroscopy of MALDI Imaging and NMR Spectroscopy Data for Evaluation of Breast Tumor Models"
+    authors: "D Brown, C Tressler, ZE Joven, C Johnson, S Nakuchima, E Yang, K Glunde"
+    venue: "American Society for Mass Spectrometry 71st Conference on Mass Spectrometry and Allied Topics, Houston, TX, USA"
+    year: 2023

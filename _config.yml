@@ -1,0 +1,35 @@
+# =========================================================
+#  Site configuration
+#  Most CONTENT lives in _data/site.yml. This file is for
+#  build settings — you rarely need to touch it.
+# =========================================================
+
+title: Zuriel Joven
+description: Biophotonics × medical robotics — light-based instruments and steerable tools for medicine.
+
+# When hosting at https://<username>.github.io  -> leave baseurl blank.
+# When hosting at https://<username>.github.io/<repo>  -> set baseurl: "/<repo>"
+url: "https://zurieljoven.com"
+baseurl: ""
+
+# Projects are a Jekyll "collection": one Markdown file each in _projects/
+collections:
+  projects:
+    output: true
+    permalink: /projects/:name/
+
+defaults:
+  - scope: { path: "", type: "projects" }
+    values: { layout: "project" }
+
+# nicer URLs for top-level pages (/projects/ instead of /projects.html)
+permalink: pretty
+
+sass:
+  style: compressed
+
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - vendor

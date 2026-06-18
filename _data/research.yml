@@ -1,0 +1,106 @@
+# =========================================================
+#  Research content — edit this file to update the research page.
+# =========================================================
+
+statement: "i build optical instruments and robotic tools that measure the mechanical state of tissue — at the point of care, in real time, and without cutting."
+
+interests: "brillouin spectroscopy · noninvasive sensing · soft robotics and actuators"
+
+stats:
+  - { k: "position",   v: "phd student, harvard-mit hst" }
+  - { k: "lab",        v: "bio-optics lab · mgh" }
+  - { k: "fellowship", v: "nsf grfp 2025–2030" }
+
+groups:
+  - id: current
+    label: "§ A — current · yun lab, mgh"
+    lab_name: "Bio-Optics Lab (Yun Lab)"
+    lab_url: "http://intelon.org"
+    pi: "Andy Yun"
+    institution: "Wellman Center for Photomedicine, Massachusetts General Hospital · Harvard-MIT HST"
+    sponsors:
+      - { name: "NSF GRFP",  logo: "/assets/img/sponsors/nsf-grfp.png" }
+      - { name: "MIT",       logo: "/assets/img/sponsors/mit.png" }
+      - { name: "HMS",       logo: "/assets/img/sponsors/hms.png" }
+      - { name: "MGH",       logo: "/assets/img/sponsors/mgh.png" }
+    projects:
+      - id: brillouin-capillaroscopy
+        title: Brillouin Capillaroscopy
+        description: "Mechanical changes in red blood cells are a root cause of microvascular dysfunction in sickle cell disease. This project develops in vivo Brillouin spectroscopy for optical assessment of capillary mechanics at the sublingual vasculature — a window accessible without surgery."
+        highlights:
+          - "active nsf grfp project"
+        tags: [brillouin, mechanobiology, sickle cell, in vivo]
+        status: active
+        project_url: /projects/brillouin-capillaroscopy/
+
+      - id: brillouin-needle-steering
+        title: Brillouin Needle Steering
+        description: "Fiber-optic Brillouin spectroscopy embedded in a robotic needle to interrogate tissue mechanics in real time during steering — enabling closed-loop control based on tissue stiffness rather than image guidance alone."
+        highlights:
+          - "1 award — nsf grfp"
+        tags: [brillouin, needle steering, soft robotics, fiber optics]
+        status: active
+        project_url: /projects/brillouin-needle-steering/
+
+  - id: previous
+    label: "§ B — previous · barman lab, johns hopkins"
+    lab_name: "Barman Lab"
+    lab_url: "https://barman.wse.jhu.edu"
+    pi: "Ishan Barman"
+    institution: "Department of Mechanical Engineering, Johns Hopkins University"
+    sponsors:
+      - { name: "Bill &amp; Melinda Gates Foundation", logo: "" }
+      - { name: "JHMRI",  logo: "/assets/img/sponsors/jhmri.png" }
+      - { name: "NIGMS",  logo: "/assets/img/sponsors/nigms.png" }
+    projects:
+      - id: sors-monte-carlo
+        title: Monte Carlo Modeling of Spatially Offset Raman Spectroscopy
+        description: "Photon transport simulations characterizing spatially offset Raman spectroscopy (SORS) across materials with varying optical properties. Established scaling laws for depth prediction and geometry-based localization modeling — enabling material-agnostic instrument design."
+        highlights:
+          - "1 paper — analyst, 2024"
+          - "1 poster — scix 2024"
+          - "1 award — 1st place facss student poster"
+        tags: [SORS, raman spectroscopy, monte carlo, photon transport]
+        status: done
+        project_url: /projects/monte-carlo-sors/
+
+      - id: sors-cartilage
+        title: Mechanical Properties Mapping in Cartilage via SORS
+        description: "First nondestructive, quantitative depth-dependent mapping of Young's and shear moduli in trypsin-treated bovine cartilage using spatially offset Raman spectroscopy. Demonstrates SORS as a tool for osteoarthritis assessment without biopsy."
+        highlights:
+          - "1 manuscript — under preparation"
+        tags: [SORS, osteoarthritis, cartilage, mechanical properties]
+        status: done
+        project_url: /projects/sors-cartilage/
+
+      - id: sors-malaria-blood
+        title: Frequency-Resolved SORS for Noninvasive Blood Analysis
+        description: "Extension of noninvasive Raman spectroscopy to detect malaria-infected flowing blood through skin layers — without invasive procedures. Combines spectral unmixing and frequency-domain modulation to discriminate parasitized cells."
+        tags: [SORS, malaria, noninvasive, blood analysis]
+        status: done
+        project_url: /projects/sors-blood-malaria/
+
+      - id: qpi-malaria-mosquito
+        title: Quantitative Phase Imaging of Malaria-Carrying Mosquito Midguts
+        description: "Label-free visualization of Plasmodium parasites in infected mosquito midguts using quantitative phase imaging — offering an alternative to traditional chemical staining and providing morphometric data on parasite development."
+        tags: [quantitative phase imaging, malaria, Plasmodium, label-free]
+        status: done
+        project_url: /projects/qpi-malaria-mosquitoes/
+
+  - id: aims
+    label: "§ C — previous · aims core lab, johns hopkins"
+    lab_name: "AIMS Core Lab"
+    lab_url: "https://johnshopkins.ilab.agilent.com/service_center/show_external/3815"
+    pi: ""
+    institution: "Johns Hopkins School of Medicine"
+    sponsors: []
+    projects:
+      - id: nmr-maldi-cancer
+        title: "NMR & MALDI-MS 2D Correlation Spectroscopy"
+        description: "Statistical correlation analysis of lipid and metabolite interactions in tumor models using combined NMR and MALDI mass spectrometry. Applied to cancer diagnostics to identify co-varying spectral features linked to metabolic phenotype."
+        highlights:
+          - "4 posters — 2023–2025"
+          - "1 award — pre-clinical poster award"
+        tags: [NMR, MALDI-MS, cancer diagnostics, metabolomics]
+        status: done
+        project_url: /projects/nmr-maldi-spectroscopy/

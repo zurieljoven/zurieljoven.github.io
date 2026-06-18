@@ -1,0 +1,53 @@
+---
+layout: default
+title: Honors
+active: honors
+permalink: /honors/
+---
+
+{% assign h = site.data.honors %}
+
+<section class="sheet page-head">
+  <div class="eyebrow">§ 05 — honors</div>
+  <h1>honors</h1>
+  <p class="lede">fellowships, honor societies, and awards.</p>
+</section>
+
+<section class="sheet hon-section">
+  <div class="hon-section-head">fellowships &amp; scholarships</div>
+  {% for item in h.fellowships %}
+  <div class="hon-row">
+    <div class="hon-year">{{ item.years }}</div>
+    <div class="hon-body">
+      <div class="hon-name">{{ item.name }}</div>
+      <div class="hon-org">{{ item.org }}{% if item.note %} · {{ item.note }}{% endif %}</div>
+    </div>
+  </div>
+  {% endfor %}
+</section>
+
+<section class="sheet hon-section">
+  <div class="hon-section-head">honor societies</div>
+  {% for item in h.honor_societies %}
+  <div class="hon-row">
+    <div class="hon-year">{{ item.inducted | split: " " | last }}</div>
+    <div class="hon-body">
+      <div class="hon-name">{{ item.name }}</div>
+      <div class="hon-org">{{ item.org }} · inducted {{ item.inducted }}{% if item.role %} · {{ item.role }}{% endif %}</div>
+    </div>
+  </div>
+  {% endfor %}
+</section>
+
+<section class="sheet hon-section hon-section--last">
+  <div class="hon-section-head">awards &amp; recognition</div>
+  {% for item in h.awards %}
+  <div class="hon-row">
+    <div class="hon-year">{{ item.year }}</div>
+    <div class="hon-body">
+      <div class="hon-name">{{ item.name }}</div>
+      <div class="hon-org">{{ item.org }}{% if item.note %} · {{ item.note }}{% endif %}</div>
+    </div>
+  </div>
+  {% endfor %}
+</section>

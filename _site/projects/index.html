@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Projects · Zuriel Joven</title>
+  <meta name="description" content="Biophotonics × medical robotics — light-based instruments and steerable tools for medicine.">
+  <!-- apply saved theme before paint to avoid flash -->
+  <script>if(localStorage.getItem('theme')==='dark')document.documentElement.setAttribute('data-theme','dark');</script>
+  <!-- favicon -->
+  <link rel="icon" type="image/png" href="/assets/img/favicon-light.png" id="favicon-el">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body>
+
+  <header class="sheet page-corners">
+    <span class="frame-tick tl" aria-hidden="true"></span>
+    <span class="frame-tick tr" aria-hidden="true"></span>
+    <nav class="nav">
+      <a class="brand" href="/">
+        <span class="brand-mark">
+          <img src="/assets/img/favicon-clear.png" alt="ZJ" width="22" height="22" id="brand-mark-img">
+        </span>
+        zurieljoven.com: phd student @ mit
+      </a>
+      <div class="nav-links">
+        
+          <a href="/">home</a>
+        
+          <a href="/research/">research</a>
+        
+          <a href="/publications/">publications</a>
+        
+          <a href="/projects/" class="active">projects</a>
+        
+          <a href="/honors/">honors</a>
+        
+          <a href="/cv.pdf">cv</a>
+        
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">◑</button>
+      </div>
+    </nav>
+  </header>
+
+  
+
+
+
+
+
+
+
+
+
+
+<section class="sheet page-head">
+  <div class="eyebrow">§ 04 — projects</div>
+  <h1>projects</h1>
+  <p class="lede">selected engineering &amp; research work in biophotonics and medical robotics — instruments, control, and measurement.</p>
+
+  <div class="filter-panel">
+    <div class="filter-group">
+      <div class="filter-group-label">category</div>
+      <div class="filter-chips" data-group="category">
+        
+        <button class="chip" data-value="course">course</button>
+        
+        <button class="chip" data-value="miscellaneous">miscellaneous</button>
+        
+        <button class="chip" data-value="research">research</button>
+        
+      </div>
+    </div>
+    <div class="filter-group">
+      <div class="filter-group-label">year</div>
+      <div class="filter-chips" data-group="year">
+        
+        <button class="chip" data-value="2026">2026</button>
+        
+        <button class="chip" data-value="2025">2025</button>
+        
+        <button class="chip" data-value="2024">2024</button>
+        
+        <button class="chip" data-value="2023">2023</button>
+        
+        <button class="chip" data-value="2021">2021</button>
+        
+        <button class="chip" data-value="2020">2020</button>
+        
+        <button class="chip" data-value="2018">2018</button>
+        
+      </div>
+    </div>
+    <div class="filter-group">
+      <div class="filter-group-label">keywords</div>
+      <div class="filter-chips" data-group="keywords">
+        
+        <button class="chip" data-value="MALDI-MS">MALDI-MS</button>
+        
+        <button class="chip" data-value="NMR">NMR</button>
+        
+        <button class="chip" data-value="Plasmodium">Plasmodium</button>
+        
+        <button class="chip" data-value="ROS">ROS</button>
+        
+        <button class="chip" data-value="SORS">SORS</button>
+        
+        <button class="chip" data-value="biomedical">biomedical</button>
+        
+        <button class="chip" data-value="biophotonics">biophotonics</button>
+        
+        <button class="chip" data-value="blood analysis">blood analysis</button>
+        
+        <button class="chip" data-value="brillouin">brillouin</button>
+        
+        <button class="chip" data-value="cancer diagnostics">cancer diagnostics</button>
+        
+        <button class="chip" data-value="cardiovascular">cardiovascular</button>
+        
+        <button class="chip" data-value="cartilage">cartilage</button>
+        
+        <button class="chip" data-value="catheter">catheter</button>
+        
+        <button class="chip" data-value="competition">competition</button>
+        
+        <button class="chip" data-value="controls">controls</button>
+        
+        <button class="chip" data-value="correlation spectroscopy">correlation spectroscopy</button>
+        
+        <button class="chip" data-value="deep learning">deep learning</button>
+        
+        <button class="chip" data-value="fabrication">fabrication</button>
+        
+        <button class="chip" data-value="fiber optics">fiber optics</button>
+        
+        <button class="chip" data-value="hardware">hardware</button>
+        
+        <button class="chip" data-value="heat transfer">heat transfer</button>
+        
+        <button class="chip" data-value="label-free">label-free</button>
+        
+        <button class="chip" data-value="low-cost design">low-cost design</button>
+        
+        <button class="chip" data-value="malaria">malaria</button>
+        
+        <button class="chip" data-value="mechanical properties">mechanical properties</button>
+        
+        <button class="chip" data-value="mechanics">mechanics</button>
+        
+        <button class="chip" data-value="mechanism">mechanism</button>
+        
+        <button class="chip" data-value="mechanobiology">mechanobiology</button>
+        
+        <button class="chip" data-value="medical devices">medical devices</button>
+        
+        <button class="chip" data-value="metabolomics">metabolomics</button>
+        
+        <button class="chip" data-value="modeling">modeling</button>
+        
+        <button class="chip" data-value="monte carlo">monte carlo</button>
+        
+        <button class="chip" data-value="mosquito">mosquito</button>
+        
+        <button class="chip" data-value="motion planning">motion planning</button>
+        
+        <button class="chip" data-value="myography">myography</button>
+        
+        <button class="chip" data-value="needle steering">needle steering</button>
+        
+        <button class="chip" data-value="noninvasive">noninvasive</button>
+        
+        <button class="chip" data-value="orthopedics">orthopedics</button>
+        
+        <button class="chip" data-value="osteoarthritis">osteoarthritis</button>
+        
+        <button class="chip" data-value="photon transport">photon transport</button>
+        
+        <button class="chip" data-value="prosthetics">prosthetics</button>
+        
+        <button class="chip" data-value="quantitative phase imaging">quantitative phase imaging</button>
+        
+        <button class="chip" data-value="raman spectroscopy">raman spectroscopy</button>
+        
+        <button class="chip" data-value="robotics">robotics</button>
+        
+        <button class="chip" data-value="segmentation">segmentation</button>
+        
+        <button class="chip" data-value="sensing">sensing</button>
+        
+        <button class="chip" data-value="simulation">simulation</button>
+        
+        <button class="chip" data-value="soft robotics">soft robotics</button>
+        
+        <button class="chip" data-value="spectroscopy">spectroscopy</button>
+        
+        <button class="chip" data-value="structural">structural</button>
+        
+        <button class="chip" data-value="surgical simulation">surgical simulation</button>
+        
+        <button class="chip" data-value="thermal">thermal</button>
+        
+      </div>
+    </div>
+    <div class="filter-meta">
+      <span class="filter-count"></span>
+      <button class="filter-clear" id="filterClear" style="display:none">clear filters</button>
+    </div>
+  </div>
+</section>
+
+<section class="sheet projects-list" id="projectsList">
+  
+  <a class="prow"
+     href="/projects/3d-segmentation-qpi/"
+     data-category="course"
+     data-year="2024"
+     data-keywords="quantitative phase imaging,segmentation,deep learning,biomedical">
+    <div class="thumb"></div>
+    <div class="rf">2024</div>
+    <div>
+      <div class="name">3D Segmentation of Cells in QPI</div>
+      <div class="sub">3D cell segmentation pipeline for quantitative phase image stacks</div>
+    </div>
+    <div class="cat">course</div>
+    <div class="status done">
+      <span class="d"></span>done
+    </div>
+    <div class="arrow">→</div>
+  </a>
+  
+  <a class="prow"
+     href="/projects/binary-force-myography/"
+     data-category="miscellaneous"
+     data-year="2018"
+     data-keywords="sensing,hardware,prosthetics,myography">
+    <div class="thumb"></div>
+    <div class="rf">2018</div>
+    <div>
+      <div class="name">Binary Force Myography</div>
+      <div class="sub">low-cost gesture sensing from muscle volume</div>
+    </div>
+    <div class="cat">miscellaneous</div>
+    <div class="status done">
+      <span class="d"></span>done
+    </div>
+    <div class="arrow">→</div>
+  </a>
+  
+  <a class="prow"
+     href="/projects/brillouin-capillaroscopy/"
+     data-category="research"
+     data-year="2026"
+     data-keywords="brillouin,biophotonics,spectroscopy,sensing,mechanobiology">
+    <div class="thumb"></div>
+    <div class="rf">2026–active</div>
+    <div>
+      <div class="name">Brillouin Capillaroscopy</div>
+      <div class="sub">label-free imaging of microvascular mechanics</div>
+    </div>
+    <div class="cat">research</div>
+    <div class="status active">
+      <span class="d"></span>active
+    </div>
+    <div class="arrow">→</div>
+  </a>
+  
+  <a class="prow"
+     href="/projects/brillouin-needle-steering/"
+     data-category="research"
+     data-year="2024"
+     data-keywords="brillouin,biophotonics,robotics,needle steering,fiber optics">
+    <div class="thumb"></div>
+    <div class="rf">2024–active</div>
+    <div>
+      <div class="name">Brillouin Needle Steering</div>
+      <div class="sub">stiffness-guided steering of biopsy needles</div>
+    </div>
+    <div class="cat">research</div>
+    <div class="status active">
+      <span class="d"></span>active
+    </div>
+    <div class="arrow">→</div>
+  </a>
+  
+  <a class="prow"
+     href="/projects/compact-heat-exchanger/"
+     data-category="course"
+     data-year="2024"
+     data-keywords="heat transfer,hardware,low-cost design,thermal">
+    <div class="thumb"></div>
+    <div class="rf">2024</div>
+    <div>
+      <div class="name">Compact Heat Exchanger</div>
+      <div class="sub">design and fabrication of a compact cross-flow heat exchanger</div>
+    </div>
+    <div class="cat">course</div>
+    <div class="status done">
+      <span class="d"></span>done
+    </div>
+    <div class="arrow">→</div>
+  </a>
+  
+  <a class="prow"
+     href="/projects/crafting-the-curve/"
+     data-category="miscellaneous"
+     data-year="2020"
+     data-keywords="low-cost design,hardware,fabrication,biomedical">
+    <div class="thumb"></div>
+    <div class="rf">2020 — 2021</div>
+    <div>
+      <div class="name">Crafting the Curve</div>
+      <div class="sub">parametric furniture design exploring structural curves in wood</div>
+    </div>
+    <div class="cat">miscellaneous</div>
+    <div class="status done">
+      <span class="d"></span>done
+    </div>
+    <div class="arrow">→</div>
+  </a>
+  
+  <a class="prow"
+     href="/projects/deflection-limited-crane/"
+     data-category="course"
+     data-year="2023"
+     data-keywords="low-cost design,hardware,structural,mechanics">
+    <div class="thumb"></div>
+    <div class="rf">2023</div>
+    <div>
+      <div class="name">Deflection-Limited Crane</div>
+      <div class="sub">minimum-mass crane design constrained by tip deflection</div>
+    </div>
+    <div class="cat">course</div>
+    <div class="status done">
+      <span class="d"></span>done
+    </div>
+    <div class="arrow">→</div>
+  </a>
+  
+  <a class="prow"
+     href="/projects/jacobian-catheter-control/"
+     data-category="course"
+     data-year="2023"
+     data-keywords="robotics,controls,catheter,soft robotics">
+    <div class="thumb"></div>
+    <div class="rf">2023</div>
+    <div>
+      <div class="name">Jacobian Estimation for Pneumatic Catheter Control</div>
+      <div class="sub">model-free control of a soft pneumatic catheter</div>
+    </div>
+    <div class="cat">course</div>
+    <div class="status done">
+      <span class="d"></span>done
+    </div>
+    <div class="arrow">→</div>
+  </a>
+  
+  <a class="prow"
+     href="/projects/mechanical-disc-launcher/"
+     data-category="course"
+     data-year="2021"
+     data-keywords="low-cost design,hardware,mechanism,competition">
+    <div class="thumb"></div>
+    <div class="rf">2021</div>
+    <div>
+      <div class="name">Mechanical Disc Launcher</div>
+      <div class="sub">spring-powered disc launcher — JHU MechE Freshman Design Challenge winner</div>
+    </div>
+    <div class="cat">course</div>
+    <div class="status done">
+      <span class="d"></span>done
+    </div>
+    <div class="arrow">→</div>
+  </a>
+  
+  <a class="prow"
+     href="/projects/monte-carlo-sors/"
+     data-category="research"
+     data-year="2024"
+     data-keywords="SORS,monte carlo,photon transport,raman spectroscopy,simulation">
+    <div class="thumb"></div>
+    <div class="rf">2024 — 2025</div>
+    <div>
+      <div class="name">Monte Carlo Modeling of SORS</div>
+      <div class="sub">photon transport simulations characterizing SORS across turbid media</div>
+    </div>
+    <div class="cat">research</div>
+    <div class="status done">
+      <span class="d"></span>done
+    </div>
+    <div class="arrow">→</div>
+  </a>
+  
+  <a class="prow"
+     href="/projects/nmr-maldi-spectroscopy/"
+     data-category="research"
+     data-year="2023"
+     data-keywords="NMR,MALDI-MS,cancer diagnostics,metabolomics,correlation spectroscopy">
+    <div class="thumb"></div>
+    <div class="rf">2023</div>
+    <div>
+      <div class="name">NMR & MALDI-MS 2D Correlation Spectroscopy</div>
+      <div class="sub">statistical analysis of lipid–metabolite interactions in tumor models</div>
+    </div>
+    <div class="cat">research</div>
+    <div class="status done">
+      <span class="d"></span>done
+    </div>
+    <div class="arrow">→</div>
+  </a>
+  
+  <a class="prow"
+     href="/projects/qpi-malaria-mosquitoes/"
+     data-category="research"
+     data-year="2024"
+     data-keywords="quantitative phase imaging,malaria,Plasmodium,label-free,mosquito">
+    <div class="thumb"></div>
+    <div class="rf">2024 — 2025</div>
+    <div>
+      <div class="name">QPI of Malaria-Infected Mosquitoes</div>
+      <div class="sub">label-free visualization of Plasmodium parasites in Anopheles midguts</div>
+    </div>
+    <div class="cat">research</div>
+    <div class="status done">
+      <span class="d"></span>done
+    </div>
+    <div class="arrow">→</div>
+  </a>
+  
+  <a class="prow"
+     href="/projects/sors-blood-malaria/"
+     data-category="research"
+     data-year="2024"
+     data-keywords="SORS,malaria,noninvasive,blood analysis,raman spectroscopy">
+    <div class="thumb"></div>
+    <div class="rf">2024 — 2025</div>
+    <div>
+      <div class="name">SORS for Noninvasive Blood Analysis</div>
+      <div class="sub">frequency-resolved SORS for detecting malaria-infected flowing blood</div>
+    </div>
+    <div class="cat">research</div>
+    <div class="status done">
+      <span class="d"></span>done
+    </div>
+    <div class="arrow">→</div>
+  </a>
+  
+  <a class="prow"
+     href="/projects/sors-cartilage/"
+     data-category="research"
+     data-year="2024"
+     data-keywords="SORS,raman spectroscopy,osteoarthritis,cartilage,mechanical properties">
+    <div class="thumb"></div>
+    <div class="rf">2024–active</div>
+    <div>
+      <div class="name">SORS of Osteoarthritic Cartilage</div>
+      <div class="sub">nondestructive depth-dependent mapping of mechanical properties in cartilage</div>
+    </div>
+    <div class="cat">research</div>
+    <div class="status active">
+      <span class="d"></span>active
+    </div>
+    <div class="arrow">→</div>
+  </a>
+  
+  <a class="prow"
+     href="/projects/laparoscopic-myomectomy/"
+     data-category="course"
+     data-year="2023"
+     data-keywords="robotics,medical devices,surgical simulation,biomedical">
+    <div class="thumb"></div>
+    <div class="rf">2023</div>
+    <div>
+      <div class="name">Simulated Laparoscopic Myomectomy</div>
+      <div class="sub">low-cost surgical trainer for laparoscopic fibroid removal</div>
+    </div>
+    <div class="cat">course</div>
+    <div class="status done">
+      <span class="d"></span>done
+    </div>
+    <div class="arrow">→</div>
+  </a>
+  
+  <a class="prow"
+     href="/projects/smart-orthopedic-driver/"
+     data-category="course"
+     data-year="2025"
+     data-keywords="robotics,medical devices,hardware,orthopedics">
+    <div class="thumb"></div>
+    <div class="rf">2025 — 2026</div>
+    <div>
+      <div class="name">Smart Driver for Orthopedic Screw Extraction</div>
+      <div class="sub">torque-sensing driver for stripped-screw removal</div>
+    </div>
+    <div class="cat">course</div>
+    <div class="status done">
+      <span class="d"></span>done
+    </div>
+    <div class="arrow">→</div>
+  </a>
+  
+  <a class="prow"
+     href="/projects/ur5-drawing-robot/"
+     data-category="course"
+     data-year="2023"
+     data-keywords="robotics,controls,motion planning,ROS">
+    <div class="thumb"></div>
+    <div class="rf">2023</div>
+    <div>
+      <div class="name">UR5 Drawing Robot</div>
+      <div class="sub">autonomous pen-plotting system using a UR5 manipulator</div>
+    </div>
+    <div class="cat">course</div>
+    <div class="status done">
+      <span class="d"></span>done
+    </div>
+    <div class="arrow">→</div>
+  </a>
+  
+  <a class="prow"
+     href="/projects/windkessel-modeling/"
+     data-category="course"
+     data-year="2023"
+     data-keywords="biomedical,cardiovascular,modeling,simulation">
+    <div class="thumb"></div>
+    <div class="rf">2023</div>
+    <div>
+      <div class="name">Windkessel Effect Modeling</div>
+      <div class="sub">lumped-parameter cardiovascular model of arterial compliance</div>
+    </div>
+    <div class="cat">course</div>
+    <div class="status done">
+      <span class="d"></span>done
+    </div>
+    <div class="arrow">→</div>
+  </a>
+  
+</section>
+
+<script>
+(function () {
+  const LOGIC = "intersection"; // "union" or "intersection" — set in _data/site.yml
+  const active = { category: new Set(), year: new Set(), keywords: new Set() };
+
+  const rows = document.querySelectorAll('#projectsList .prow');
+  const countEl = document.querySelector('.filter-count');
+  const clearBtn = document.getElementById('filterClear');
+
+  function applyFilters() {
+    const hasAny = Object.values(active).some(s => s.size > 0);
+    clearBtn.style.display = hasAny ? '' : 'none';
+
+    let shown = 0;
+    rows.forEach(row => {
+      const rowCat = row.dataset.category;
+      const rowYear = row.dataset.year;
+      const rowKw = row.dataset.keywords ? row.dataset.keywords.split(',').map(s => s.trim()) : [];
+
+      const groupMatches = {
+        category: active.category.size === 0 || active.category.has(rowCat),
+        year:     active.year.size === 0     || active.year.has(rowYear),
+        // keywords: intersection = project must have ALL selected keywords; union = any match
+        keywords: active.keywords.size === 0  ||
+          (LOGIC === 'intersection'
+            ? [...active.keywords].every(k => rowKw.includes(k))
+            : rowKw.some(k => active.keywords.has(k)))
+      };
+
+      let visible;
+      if (!hasAny) {
+        visible = true;
+      } else if (LOGIC === 'union') {
+        // show if any active group matches
+        const activeGroups = Object.keys(active).filter(g => active[g].size > 0);
+        visible = activeGroups.some(g => groupMatches[g]);
+      } else {
+        // intersection: must match every group that has active filters
+        visible = Object.keys(active).every(g => groupMatches[g]);
+      }
+
+      row.style.display = visible ? '' : 'none';
+      if (visible) shown++;
+    });
+
+    countEl.textContent = hasAny ? shown + ' / ' + rows.length + ' shown' : '';
+  }
+
+  document.querySelectorAll('.filter-chips').forEach(group => {
+    const groupName = group.dataset.group;
+    group.querySelectorAll('.chip').forEach(chip => {
+      chip.addEventListener('click', () => {
+        const val = chip.dataset.value;
+        if (active[groupName].has(val)) {
+          active[groupName].delete(val);
+          chip.classList.remove('active');
+        } else {
+          active[groupName].add(val);
+          chip.classList.add('active');
+        }
+        applyFilters();
+      });
+    });
+  });
+
+  clearBtn.addEventListener('click', () => {
+    Object.values(active).forEach(s => s.clear());
+    document.querySelectorAll('.filter-chips .chip').forEach(c => c.classList.remove('active'));
+    applyFilters();
+  });
+})();
+</script>
+
+
+  <footer class="sheet footer page-corners">
+    <span class="frame-tick bl" aria-hidden="true"></span>
+    <span class="frame-tick br" aria-hidden="true"></span>
+    <a href="mailto:zuriel@mit.edu">zuriel@mit.edu</a>
+    <div class="links">
+      <a href="https://www.linkedin.com/in/zurieljoven/">linkedin</a><a href="https://www.youtube.com/zurieljoven">youtube</a><a href="https://scholar.google.com/citations?user=SA8QhfkAAAAJ&hl=en">scholar</a>
+    </div>
+    <span class="sheet-no">zuriel erikson valencia joven</span>
+  </footer>
+
+  <script>
+  (function () {
+    var root    = document.documentElement;
+    var btn     = document.getElementById('themeToggle');
+    var favicon = document.getElementById('favicon-el');
+    var lightFav = '/assets/img/favicon-light.png';
+    var darkFav  = '/assets/img/favicon-dark.png';
+
+    function applyTheme(dark) {
+      if (dark) {
+        root.setAttribute('data-theme', 'dark');
+        localStorage.setItem('theme', 'dark');
+        favicon.href = darkFav;
+      } else {
+        root.removeAttribute('data-theme');
+        localStorage.setItem('theme', 'light');
+        favicon.href = lightFav;
+      }
+    }
+
+    // sync favicon on initial load
+    applyTheme(root.getAttribute('data-theme') === 'dark');
+
+    btn.addEventListener('click', function () {
+      applyTheme(root.getAttribute('data-theme') !== 'dark');
+    });
+  })();
+  </script>
+
+</body>
+</html>

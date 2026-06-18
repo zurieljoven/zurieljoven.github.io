@@ -1,0 +1,77 @@
+# =========================================================
+#  Honors & Awards — edit this file to update the honors page.
+# =========================================================
+
+fellowships:
+  - name: "NSF Graduate Research Fellowship (GRFP)"
+    org: "National Science Foundation"
+    years: "2025 – 2030"
+
+  - name: "Clark Scholars"
+    org: "Johns Hopkins University"
+    years: "2021 – 2025"
+    note: "need-based merit scholarship"
+
+  - name: "National Merit Scholarship"
+    org: "National Merit Scholarship Corporation"
+    years: "2021"
+
+honor_societies:
+  - name: "Tau Beta Pi — MD Alpha Chapter"
+    org: "Engineering Honor Society"
+    inducted: "November 2023"
+    role: "Treasurer, AY 2025–26"
+
+  - name: "Pi Tau Sigma — Tau Alpha Chapter"
+    org: "Mechanical Engineering Honor Society"
+    inducted: "November 2023"
+    role: "Vice President, AY 2025–26"
+
+awards:
+  - name: "Charles A. Miller Award"
+    org: "JHU Department of Mechanical Engineering"
+    year: 2025
+    note: "Faculty-selected; awarded to 2 graduating seniors"
+
+  - name: "Senior Design: 2nd Place"
+    org: "JHU MechE / ASME Review Panel"
+    year: 2025
+
+  - name: "WSE Design Day — Tangible Ingenuity Award"
+    org: "Johns Hopkins Whiting School of Engineering"
+    year: 2025
+    note: "MechE senior design project"
+
+  - name: "Dean's List"
+    org: "Johns Hopkins University"
+    year: "2021 – 2025"
+    note: "8 semesters; 3.99 / 4.00 GPA"
+
+  - name: "Robert George Gerstymyer Award"
+    org: "JHU Department of Mechanical Engineering"
+    year: 2024
+    note: "Faculty-selected; awarded to 7 students"
+
+  - name: "1st Place Student Poster Award"
+    org: "FACSS / SciX 2024"
+    year: 2024
+    note: "Monte Carlo SORS characterization"
+
+  - name: "Pre-Clinical Poster Award"
+    org: "JHU School of Medicine Radiology Research Day"
+    year: 2023
+
+  - name: "Freshman Design Challenge — Winner"
+    org: "JHU Department of Mechanical Engineering"
+    year: 2021
+    note: "Mechanical disc launcher project"
+
+  - name: "Games for Change Student Challenge — National Champion"
+    org: "Games for Change"
+    year: 2021
+    note: "$1,000 prize"
+
+  - name: "MIT THINK Grand Prize"
+    org: "MIT THINK Scholars Program"
+    year: 2018
+    note: "Binary force myography project"

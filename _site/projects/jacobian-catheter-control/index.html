@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Jacobian Estimation for Pneumatic Catheter Control · Zuriel Joven</title>
+  <meta name="description" content="Biophotonics × medical robotics — light-based instruments and steerable tools for medicine.">
+  <!-- apply saved theme before paint to avoid flash -->
+  <script>if(localStorage.getItem('theme')==='dark')document.documentElement.setAttribute('data-theme','dark');</script>
+  <!-- favicon -->
+  <link rel="icon" type="image/png" href="/assets/img/favicon-light.png" id="favicon-el">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body>
+
+  <header class="sheet page-corners">
+    <span class="frame-tick tl" aria-hidden="true"></span>
+    <span class="frame-tick tr" aria-hidden="true"></span>
+    <nav class="nav">
+      <a class="brand" href="/">
+        <span class="brand-mark">
+          <img src="/assets/img/favicon-clear.png" alt="ZJ" width="22" height="22" id="brand-mark-img">
+        </span>
+        zurieljoven.com: phd student @ mit
+      </a>
+      <div class="nav-links">
+        
+          <a href="/">home</a>
+        
+          <a href="/research/">research</a>
+        
+          <a href="/publications/">publications</a>
+        
+          <a href="/projects/">projects</a>
+        
+          <a href="/honors/">honors</a>
+        
+          <a href="/cv.pdf">cv</a>
+        
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">◑</button>
+      </div>
+    </nav>
+  </header>
+
+  
+
+
+
+
+
+
+
+<!-- patent header grid -->
+<div class="sheet">
+  <div class="phead">
+    <div class="cell">
+      <div class="k">year</div>
+      <div class="v">2023</div>
+    </div>
+    <div class="cell">
+      <div class="k">keywords</div>
+      <div class="v">robotics · controls · catheter · soft robotics</div>
+    </div>
+    <div class="cell">
+      <div class="k">course</div>
+      <div class="v">jhu course project</div>
+    </div>
+  </div>
+</div>
+
+<!-- title -->
+<section class="sheet detail-title">
+  <div class="crumb">projects / jacobian estimation for pneumatic catheter control</div>
+  <h1>Jacobian Estimation for Pneumatic Catheter Control</h1>
+  <p class="summary">model-free control of a soft pneumatic catheter</p>
+</section>
+
+<!-- highlights strip (optional) -->
+
+
+<!-- body + figures -->
+<section class="sheet detail">
+  <div class="body">
+    <p>Soft pneumatic catheters are difficult to model analytically because their shape depends on nonlinear material behavior and contact. This project estimated the catheter’s Jacobian online — the local mapping from actuation pressures to tip motion — enabling closed-loop control without an explicit physical model.</p>
+
+<p>The empirical Jacobian was updated continuously from observed tip motion, letting the controller adapt as conditions changed.</p>
+
+<h2 id="contributions">Contributions</h2>
+
+<ol>
+  <li>Built the pneumatic actuation and electromagnetic tip-tracking testbed.</li>
+  <li>Implemented online Jacobian estimation from measured tip motion.</li>
+  <li>Demonstrated closed-loop tip positioning under model-free control.</li>
+</ol>
+
+  </div>
+
+  <aside class="aside">
+    
+      <div class="fig">
+        
+          <span class="ph">[ catheter setup ]</span>
+        
+        
+        <svg class="callouts" viewBox="0 0 380 240" preserveAspectRatio="xMidYMid meet">
+          
+          <line class="ld" x1="190" y1="130" x2="45" y2="50" style="animation-delay:0.4s"></line>
+          
+          <line class="ld" x1="280" y1="80" x2="335" y2="35" style="animation-delay:0.6s"></line>
+          
+          
+          
+          <g class="dot" style="animation-delay:0.4s">
+            <circle cx="45" cy="50" r="10" fill="#F3EFE6" stroke="#A6392B" stroke-width="1.2"></circle>
+            <text x="45" y="54" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="11" fill="#A6392B">1</text>
+          </g>
+          
+          
+          <g class="dot" style="animation-delay:0.6s">
+            <circle cx="335" cy="35" r="10" fill="#F3EFE6" stroke="#A6392B" stroke-width="1.2"></circle>
+            <text x="335" y="39" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="11" fill="#A6392B">2</text>
+          </g>
+          
+        </svg>
+        
+      </div>
+      <div class="fig-cap"><span>fig. 1 — testbed</span><span>1 catheter · 2 em tracker</span></div>
+    
+      <div class="fig small">
+        
+          <span class="ph">[ tip tracking ]</span>
+        
+        
+      </div>
+      <div class="fig-cap"><span>fig. 2 — tip error</span></div>
+    
+
+    <div class="specs">
+      <div><span class="k">role —</span> modeling & control</div>
+      <div><span class="k">lab —</span> jhu course project</div>
+      <div><span class="k">tools —</span> python, ros, electromagnetic tracking</div>
+      
+    </div>
+  </aside>
+</section>
+
+<!-- prev / next -->
+<div class="sheet">
+  <div class="pn">
+    <a class="prev" href="/projects/">
+      <div class="k">← index</div><div class="v">— all projects</div>
+    </a>
+    
+    <a class="next" href="/projects/mechanical-disc-launcher/">
+      <div class="k">next →</div><div class="v">Mechanical Disc Launcher</div>
+    </a>
+    
+  </div>
+</div>
+
+
+  <footer class="sheet footer page-corners">
+    <span class="frame-tick bl" aria-hidden="true"></span>
+    <span class="frame-tick br" aria-hidden="true"></span>
+    <a href="mailto:zuriel@mit.edu">zuriel@mit.edu</a>
+    <div class="links">
+      <a href="https://www.linkedin.com/in/zurieljoven/">linkedin</a><a href="https://www.youtube.com/zurieljoven">youtube</a><a href="https://scholar.google.com/citations?user=SA8QhfkAAAAJ&hl=en">scholar</a>
+    </div>
+    <span class="sheet-no">zuriel erikson valencia joven</span>
+  </footer>
+
+  <script>
+  (function () {
+    var root    = document.documentElement;
+    var btn     = document.getElementById('themeToggle');
+    var favicon = document.getElementById('favicon-el');
+    var lightFav = '/assets/img/favicon-light.png';
+    var darkFav  = '/assets/img/favicon-dark.png';
+
+    function applyTheme(dark) {
+      if (dark) {
+        root.setAttribute('data-theme', 'dark');
+        localStorage.setItem('theme', 'dark');
+        favicon.href = darkFav;
+      } else {
+        root.removeAttribute('data-theme');
+        localStorage.setItem('theme', 'light');
+        favicon.href = lightFav;
+      }
+    }
+
+    // sync favicon on initial load
+    applyTheme(root.getAttribute('data-theme') === 'dark');
+
+    btn.addEventListener('click', function () {
+      applyTheme(root.getAttribute('data-theme') !== 'dark');
+    });
+  })();
+  </script>
+
+</body>
+</html>

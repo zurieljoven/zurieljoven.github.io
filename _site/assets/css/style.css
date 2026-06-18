@@ -217,7 +217,7 @@ footer.sheet {
   line-height: 1.5;
   color: rgba(24, 20, 15, 0.66);
 }
-.facts .k { color: var(--faint); font-weight: 600; }
+.facts .k { color: var(--red); font-weight: 600; }
 .btn-row { margin-top: 34px; display: flex; gap: 12px; }
 .btn {
   font-family: var(--mono);
@@ -286,13 +286,28 @@ footer.sheet {
 .frame-tick.br { bottom: 10px; right: 10px; border-right: 1px solid var(--rule-2); border-bottom: 1px solid var(--rule-2); }
 
 /* leader-line draw-on animation */
-.ld { stroke: var(--ink); stroke-width: 1; stroke-dasharray: 200; stroke-dashoffset: 200; animation: zjDraw 1s ease forwards; }
-.dot { opacity: 0; animation: zjDot 1.3s ease forwards; }
+.ld {
+  stroke: var(--ink);
+  stroke-width: 1;
+  stroke-dasharray: 200;
+  stroke-dashoffset: 200;
+  will-change: stroke-dashoffset;
+  -webkit-animation: zjDraw 1s ease forwards;
+  animation: zjDraw 1s ease forwards;
+}
+.dot {
+  opacity: 0;
+  will-change: opacity;
+  -webkit-animation: zjDot 1.3s ease forwards;
+  animation: zjDot 1.3s ease forwards;
+}
+@-webkit-keyframes zjDraw { to { stroke-dashoffset: 0; } }
 @keyframes zjDraw { to { stroke-dashoffset: 0; } }
+@-webkit-keyframes zjDot { 0%,55% { opacity: 0; } 100% { opacity: 1; } }
 @keyframes zjDot { 0%,55% { opacity: 0; } 100% { opacity: 1; } }
 @media (prefers-reduced-motion: reduce) {
-  .ld { animation: none; stroke-dashoffset: 0; }
-  .dot { animation: none; opacity: 1; }
+  .ld { -webkit-animation: none; animation: none; stroke-dashoffset: 0; }
+  .dot { -webkit-animation: none; animation: none; opacity: 1; }
 }
 
 /* =========================================================
@@ -606,18 +621,30 @@ a.phighlight-label:hover { text-decoration: underline; }
   overflow: hidden;
   border-bottom: 1px solid var(--rule);
   padding: 20px 0;
+  /* new stacking context so iOS Safari composites the child correctly */
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
 }
 
+@-webkit-keyframes affil-scroll {
+  from { -webkit-transform: translateX(0); transform: translateX(0); }
+  to   { -webkit-transform: translateX(-50%); transform: translateX(-50%); }
+}
 @keyframes affil-scroll {
   from { transform: translateX(0); }
-  to   { transform: translateX(-25%); }
+  to   { transform: translateX(-50%); }
 }
 
 .affil-track {
   display: flex;
   align-items: center;
   gap: 72px;
+  /* explicit min-width forces correct layout before animation starts */
+  width: -webkit-max-content;
   width: max-content;
+  min-width: 200vw;
+  will-change: transform;
+  -webkit-animation: affil-scroll 28s linear infinite;
   animation: affil-scroll 28s linear infinite;
 }
 
@@ -653,7 +680,7 @@ a.phighlight-label:hover { text-decoration: underline; }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .affil-track { animation: none; }
+  .affil-track { -webkit-animation: none; animation: none; }
 }
 
 .rg-grid { display: contents; } /* cards stack vertically, each full width */
@@ -961,9 +988,41 @@ a.phighlight-label:hover { text-decoration: underline; }
 .filter-meta {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   gap: 20px;
   padding-top: 4px;
   min-height: 30px;
+}
+.sort-group {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.sort-chips {
+  display: flex;
+  gap: 8px;
+}
+.sort-chip {
+  border-color: rgba(166, 57, 43, 0.18);
+  color: rgba(166, 57, 43, 0.45);
+}
+.sort-chip:hover {
+  background: rgba(166, 57, 43, 0.06);
+  border-color: rgba(166, 57, 43, 0.5);
+  color: var(--red);
+}
+.sort-chip.active {
+  background: var(--red);
+  color: #F5F2EC;
+  border-color: var(--red);
+}
+[data-theme="dark"] .sort-chip              { border-color: rgba(224, 88, 72, 0.2); color: rgba(224, 88, 72, 0.35); }
+[data-theme="dark"] .sort-chip:hover        { background: rgba(224, 88, 72, 0.08); border-color: rgba(224, 88, 72, 0.5); color: var(--red); }
+[data-theme="dark"] .sort-chip.active       { background: var(--red); color: #F5F2EC; border-color: var(--red); }
+.filter-meta-right {
+  display: flex;
+  align-items: center;
+  gap: 16px;
 }
 .filter-count {
   font-family: var(--mono);

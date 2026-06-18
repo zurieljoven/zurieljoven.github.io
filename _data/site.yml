@@ -25,8 +25,8 @@ hero:
   title_line_2: "robotics"          # rendered as  × robotics
   lede: "mechanical engineer specializing in biophotonics & medical robotics — building light-based instruments and steerable tools for medicine."
   facts:
-    - { k: "current —",  v: "phd student, harvard-mit hst · yun lab, wellman center for photomedicine @ mgh" }
-    - { k: "previous —", v: "bs/mse, johns hopkins mechanical engineering · barman lab" }
+    - { k: "current:",  v: "phd student, harvard-mit hst · yun lab, wellman center for photomedicine @ mgh" }
+    - { k: "previous:", v: "bs/mse, johns hopkins mechanical engineering · barman lab" }
   # hero figure: set `image` to a path under /img to replace the placeholder
   figure:
     image: ""                       # e.g. "/img/portrait.jpg"

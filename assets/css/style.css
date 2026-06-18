@@ -217,7 +217,7 @@ footer.sheet {
   line-height: 1.5;
   color: rgba(24, 20, 15, 0.66);
 }
-.facts .k { color: var(--faint); font-weight: 600; }
+.facts .k { color: var(--red); font-weight: 600; }
 .btn-row { margin-top: 34px; display: flex; gap: 12px; }
 .btn {
   font-family: var(--mono);
@@ -286,13 +286,28 @@ footer.sheet {
 .frame-tick.br { bottom: 10px; right: 10px; border-right: 1px solid var(--rule-2); border-bottom: 1px solid var(--rule-2); }
 
 /* leader-line draw-on animation */
-.ld { stroke: var(--ink); stroke-width: 1; stroke-dasharray: 200; stroke-dashoffset: 200; animation: zjDraw 1s ease forwards; }
-.dot { opacity: 0; animation: zjDot 1.3s ease forwards; }
+.ld {
+  stroke: var(--ink);
+  stroke-width: 1;
+  stroke-dasharray: 200;
+  stroke-dashoffset: 200;
+  will-change: stroke-dashoffset;
+  -webkit-animation: zjDraw 1s ease forwards;
+  animation: zjDraw 1s ease forwards;
+}
+.dot {
+  opacity: 0;
+  will-change: opacity;
+  -webkit-animation: zjDot 1.3s ease forwards;
+  animation: zjDot 1.3s ease forwards;
+}
+@-webkit-keyframes zjDraw { to { stroke-dashoffset: 0; } }
 @keyframes zjDraw { to { stroke-dashoffset: 0; } }
+@-webkit-keyframes zjDot { 0%,55% { opacity: 0; } 100% { opacity: 1; } }
 @keyframes zjDot { 0%,55% { opacity: 0; } 100% { opacity: 1; } }
 @media (prefers-reduced-motion: reduce) {
-  .ld { animation: none; stroke-dashoffset: 0; }
-  .dot { animation: none; opacity: 1; }
+  .ld { -webkit-animation: none; animation: none; stroke-dashoffset: 0; }
+  .dot { -webkit-animation: none; animation: none; opacity: 1; }
 }
 
 /* =========================================================
@@ -987,6 +1002,23 @@ a.phighlight-label:hover { text-decoration: underline; }
   display: flex;
   gap: 8px;
 }
+.sort-chip {
+  border-color: rgba(166, 57, 43, 0.18);
+  color: rgba(166, 57, 43, 0.45);
+}
+.sort-chip:hover {
+  background: rgba(166, 57, 43, 0.06);
+  border-color: rgba(166, 57, 43, 0.5);
+  color: var(--red);
+}
+.sort-chip.active {
+  background: var(--red);
+  color: #F5F2EC;
+  border-color: var(--red);
+}
+[data-theme="dark"] .sort-chip              { border-color: rgba(224, 88, 72, 0.2); color: rgba(224, 88, 72, 0.35); }
+[data-theme="dark"] .sort-chip:hover        { background: rgba(224, 88, 72, 0.08); border-color: rgba(224, 88, 72, 0.5); color: var(--red); }
+[data-theme="dark"] .sort-chip.active       { background: var(--red); color: #F5F2EC; border-color: var(--red); }
 .filter-meta-right {
   display: flex;
   align-items: center;

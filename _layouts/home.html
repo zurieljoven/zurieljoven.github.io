@@ -30,7 +30,7 @@ layout: default
     <h1>{{ h.title_line_1 }}<br><span class="x">×</span> {{ h.title_line_2 }}</h1>
     <p class="lede">{{ h.lede }}</p>
     <div class="facts">
-      {% for f in h.facts %}<div><span class="k">{{ f.k }}</span> {{ f.v }}</div>{% endfor %}
+      {% for f in h.facts %}<div><em><span class="k">{{ f.k }}</span></em> {{ f.v }}</div>{% endfor %}
     </div>
     <div class="btn-row">
       <a class="btn" href="{{ '/research/' | relative_url }}">view research →</a>
